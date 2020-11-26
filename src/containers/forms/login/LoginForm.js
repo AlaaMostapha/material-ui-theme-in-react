@@ -3,7 +3,7 @@ import CreateButton from '../../../components/button/Button';
 import {Formik,Form} from 'formik';
 import FromikControl from '../../../components/formControls/FormikControl';
 import * as Yup from 'yup';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import history from '../../../Routes/History';
 const initialValues={
     email:'',
@@ -28,11 +28,19 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    [theme.breakpoints.down('md')]: {
+      backgroundColor: theme.palette.secondary.main,
+    },
+    [theme.breakpoints.up('lg')]: {
+      backgroundColor: theme.palette.primary.main,
+    },
   },
 }));
 
 function LoginForm() {
      const classes = useStyles();
+     const theme = useTheme();
+     console.log('use theme',theme)
     return (
             <Formik
                 initialValues={initialValues}
