@@ -1,9 +1,8 @@
 import './App.scss';
 import Route from './Routes/Route';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-const theme = createMuiTheme({
-  
-});
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './theme/Theme';
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
