@@ -6,7 +6,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: 'flex', 
   },
   content: {
     flexGrow: 1,
@@ -16,24 +16,20 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 function Welcome() {
-    const [open, setOpen] = React.useState(false);
+    // const [open, setOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = React.useState(false);
 
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
-
-    const handleDrawerClose = () => {
-        setOpen(false);
-    };
-
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
     const classes = useStyles();
 //   const theme = useTheme();
     return (
         <div className={classes.root}>
-            <SideMenu onClick={handleDrawerOpen} open={open}/>
+            <SideMenu onClick={handleDrawerToggle} open={mobileOpen}/>
             <div className={classes.content}>
-                <Header onClick={handleDrawerClose}/>
+                <Header onClick={handleDrawerToggle}/>
                 <section>
                     <Container className={classes.welcome} >
                         <h1 style={{textAlign:'center'}}>Welcome</h1>

@@ -36,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function SideMenu(props) {
-  // const { window ,onClick} = props;
+  const { window ,onClick} = props;
   const classes = useStyles();
-  // const theme = useTheme();
+  const theme = useTheme();
   // const [mobileOpen, setMobileOpen] = React.useState(false);
 
   // const handleDrawerToggle = () => {
@@ -74,7 +74,7 @@ function SideMenu(props) {
       <CssBaseline />
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        {/* <Hidden smUp implementation="css">
+        <Hidden smUp implementation="css">
            
           <Drawer
             container={container}
@@ -91,7 +91,7 @@ function SideMenu(props) {
           >
             {drawer}
           </Drawer>
-        </Hidden> */}
+        </Hidden>
         <Hidden xsDown implementation="css">
           <Drawer
             classes={{
