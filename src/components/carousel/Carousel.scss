@@ -1,0 +1,13 @@
+:root{
+    --primary-background: rgb(63 81 181);
+    --secondry-color: #fafafa;
+
+    --hover-background:rgb(63 81 181 / 80%)
+}
+.rec.rec-arrow {
+    background-color:var(--primary-background);
+    color: var(--secondry-color);
+}
+.rec.rec-arrow:hover{
+    background-color:var(--hover-background);
+}
