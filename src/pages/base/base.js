@@ -15,7 +15,7 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
-import Route from "../../Routes/Route";
+import Welcome from "../welcome/Welcome";
 import history from "../../Routes/History";
 const drawerWidth = 200;
 
@@ -170,7 +170,7 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <div className={classes.drawerHeader} />
-        <Route />
+        <Welcome />
       </main>
     </div>
   );

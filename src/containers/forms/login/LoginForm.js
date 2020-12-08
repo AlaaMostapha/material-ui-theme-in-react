@@ -5,13 +5,17 @@ import FromikControl from "../../../components/formControls/FormikControl";
 import * as Yup from "yup";
 import { makeStyles } from "@material-ui/core/styles";
 import history from "../../../Routes/History";
+import auth from "../../../fakeAuth/auth";
 const initialValues = {
   email: "",
   password: "",
 };
 const onSubmit = (values) => {
   // console.log("form state", values);
-  history.push("/");
+
+  auth.login(() => {
+    history.push("/");
+  });
 };
 const validatationSchema = Yup.object({
   email: Yup.string()

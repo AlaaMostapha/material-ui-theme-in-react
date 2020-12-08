@@ -9,8 +9,9 @@ import { useStyles } from "./style";
 import "./Login.scss";
 import LoginForm from "../../containers/forms/login/LoginForm";
 
-export default function SignInSide() {
+export default function SignInSide(props) {
   const classes = useStyles();
+  console.log(props);
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -19,7 +20,7 @@ export default function SignInSide() {
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h4" variant="h4" color="textPrimary">
+          <Typography component="h4" variant="button" color="textPrimary">
             Sign in
           </Typography>
           <LoginForm />
