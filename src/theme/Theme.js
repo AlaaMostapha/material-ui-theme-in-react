@@ -1,14 +1,21 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 // import purple from "@material-ui/core/colors/purple";
-// import green from "@material-ui/core/colors/green";
+import red from "@material-ui/core/colors/red";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#3f51b5",
-      light: "#7986cb",
+      main: red[100],
+      light: red[100],
     },
     secondary: {
-      main: "#03a9f4",
+      main: "#b958d4",
+    },
+    typography: {
+      fontWeightLight: 400,
+      fontWeightBold: 800,
+      h1: {
+        fontSize: "8rem",
+      },
     },
   },
 });
