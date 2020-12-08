@@ -6,14 +6,11 @@ import Grid from "@material-ui/core/Grid";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { useStyles } from "./style";
-import { useTheme } from "@material-ui/core/styles";
 import "./Login.scss";
 import LoginForm from "../../containers/forms/login/LoginForm";
 
 export default function SignInSide() {
   const classes = useStyles();
-  const theme = useTheme();
-  console.log(theme);
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />

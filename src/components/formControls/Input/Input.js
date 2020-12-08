@@ -9,7 +9,6 @@ function Input(props) {
     <div>
       <Field name={name}>
         {(props) => {
-          console.log(props);
           const { field } = props;
           return (
             <TextField

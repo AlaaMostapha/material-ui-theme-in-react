@@ -1,12 +1,7 @@
-import React from 'react'
-import './TextError.scss';
+import React from "react";
+import "./TextError.scss";
 function TextError(props) {
-    return (
-        <div className="error">
-            {console.log(props)}
-            {props.children}
-        </div>
-    )
+  return <div className="error">{props.children}</div>;
 }
 
-export default TextError
+export default TextError;

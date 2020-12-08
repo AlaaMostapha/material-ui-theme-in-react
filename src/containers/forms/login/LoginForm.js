@@ -10,7 +10,7 @@ const initialValues = {
   password: "",
 };
 const onSubmit = (values) => {
-  console.log("form state", values);
+  // console.log("form state", values);
   history.push("/");
 };
 const validatationSchema = Yup.object({
@@ -41,8 +41,6 @@ const useStyles = makeStyles((theme) => ({
 
 function LoginForm() {
   const classes = useStyles();
-  const theme = useTheme();
-  console.log("use theme", theme);
   return (
     <Formik
       initialValues={initialValues}
