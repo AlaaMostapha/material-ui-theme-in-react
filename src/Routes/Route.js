@@ -16,3 +16,4 @@ export default function Routes({ location }) {
     </Router>
   );
 }
+c;
